@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header {
+    width: 100%;
+    padding: 1rem ;
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(10px);
+    z-index: 100;  
+}
+
+header h1 {
+    text-align: center;
+}
+body {
+    font-family: sans-serif;
+    font-weight: 100;
+    background-color: rgb(236, 236, 236);
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+    row-gap: 7rem;
+    padding: 0 4rem;
+
+
+}
+
+section {
+    width: 400px;
+    min-width: 300px;
+    height: 500px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 0px 1.6rem 2.2rem -1.4rem rgba(0, 0, 0, 0.678);
+}
+
+section div {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+}
+
+img {
+    position: relative;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+article {
+    max-width: 100%;
+    height: 50%;
+    backdrop-filter: blur(10px);  
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    padding: 1rem;
+    color: #333;
+    background-color: aliceblue;
+
+}
+
+article div:first-of-type {
+    height: 60%;
+    overflow-y: hidden;
+}
+
+h2 {
+    font-weight: 150;
+}
+
+
+article div a {
+    background-color: rgb(45, 136, 255);
+    color: aliceblue;
+    text-decoration: none;
+    padding: .5rem ;
+    cursor: pointer;
+}
+
+article div a:hover {
+    transition-duration: 0.4s;
+    padding-right: 10px;
+}
+
+article div a:hover::after{
+    content: " →";
+}
+
+
+article div p {
+    font-size: .7rem;
+    display: block;
+    width: 100%;
+}
+
+@media screen and (max-width:700px) {
+    body {
+        padding: 0 2rem;
+    }
+    
+}
+
+
+
+/* -------
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5em 2em;
+    font-family: sans-serif;
+}
+.logo {
+    font-weight: 100;
+    font-size: 1.5rem;
+}
+
+.burgerButton {
+    background: transparent;
+    width: 2.8rem;
+    height: 2.8rem;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.line {
+    width: 60%;
+    border-radius: 10px;
+    height: 2px;
+    background-color: black;
+    position: relative;
+    transition-duration: 0.6s;
+
+}
+
+.line::before,
+.line::after {
+    width: 100%;
+    border-radius: 10px;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    content: "";
+    transition-duration: .6s;
+}
+.line::before {
+    transform: translateY(10px);
+    left: 0;
+}
+.line::after{
+    transform: translateY(-10px);
+    left: 0;
+}
+
+/* animation */ 
+
+.burgerButton.open .line {
+    transform: translateX(-30px);
+    background: transparent;
+}
+
+.burgerButton.open .line::before {
+    transform: rotate(45deg);
+    left: 30px;
+}
+
+.burgerButton.open .line::after {
+    transform: rotate(-45deg);
+    left: 30px;
+}
+
+
+
+
+
+
+
